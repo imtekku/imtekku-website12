@@ -1,0 +1,649 @@
+/* ================================================= */
+/* === KODE CSS FINAL: DENIM & BESI TUA (VINTAGE INDUSTRIAL) === */
+/* ================================================= */
+
+/* Font yang berkarakter, cocok untuk tema tangguh */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/* --- Variabel Warna Default (Light Mode: Warna Denim/Besi) --- */
+:root {
+    --color-primary: #34495e;      /* Biru Denim Tua/Abu-abu Besi */
+    --color-accent: #e74c3c;       /* Merah Karat (Aksen Kuat) */
+    --color-secondary-accent: #f1c40f; /* Kuning Karat (Aksen Sekunder) */
+    --color-text-dark: #2c3e50;    /* Teks Abu-abu Gelap */
+    --color-text-light: #ecf0f1;   /* Krem Pucat/Perak */
+    --color-background-light: #f9f9f9; /* Latar Belakang Sangat Pucat */
+    --color-card-background: #ffffff; /* Card Putih */
+    --color-border-light: #bdc3c7; /* Border Abu-abu Sedang */
+    
+    --font-heading: 'Roboto Slab', serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+/* --- Reset Dasar --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    background-color: var(--color-background-light);
+    color: var(--color-text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- Navigasi Bar --- */
+.navbar {
+    background-color: var(--color-primary); /* Biru Denim Tua */
+    color: var(--color-text-light);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; 
+    top: 0;
+    z-index: 50; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid var(--color-accent); /* Garis Merah Karat */
+}
+
+.nav-brand {
+    font-family: var(--font-heading);
+    font-size: 1.6em;
+    font-weight: 700;
+    color: var(--color-secondary-accent); /* Aksen Kuning Karat */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.nav-links { list-style: none; display: flex; margin: 0; padding: 0; }
+.nav-links li { margin-left: 20px; }
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-weight: 700;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover { color: var(--color-accent); } /* Merah Karat saat hover */
+
+/* Styling Tombol Toggle (Mode Gelap/Terang) */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: transform 0.2s;
+    padding: 5px;
+    color: var(--color-secondary-accent); /* Kuning Karat */
+    margin-left: 20px;
+}
+
+.theme-toggle:hover { transform: scale(1.1); }
+
+/* --- Image Banner --- */
+.image-banner {
+    width: 100%;
+    overflow: hidden; 
+    max-height: 400px;
+}
+
+.banner-img {
+    width: 100%; 
+    height: auto;
+    display: block;
+    object-fit: cover; 
+    filter: grayscale(0.2) contrast(1.1); /* Kontras tinggi dan sedikit abu-abu */
+}
+
+/* --- Page Title --- */
+.page-title {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 25px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.page-title h1 {
+    font-family: var(--font-heading);
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--color-secondary-accent); /* Kuning Karat */
+}
+
+.page-title p {
+    font-size: 1em;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.page-title .container { padding: 0 20px; margin: auto; }
+
+
+/* --- Main Content Container & Card Styling --- */
+.container {
+    padding: 20px;
+    max-width: 850px; 
+    margin: 40px auto;
+    flex-grow: 1; 
+}
+
+/* Kartu Utama (Berita, About, Game, Staff) */
+.announcement-card, .about-card, .game-card, .staff-card {
+    background: var(--color-card-background);
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 6px 6px 0px 0px var(--color-border-light); /* Efek bingkai tangguh */
+    margin-bottom: 40px;
+    text-align: center;
+    border: 1px solid var(--color-border-light);
+}
+
+.announcement-card h2, .about-card h2, .staff-card h2 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block; 
+    text-decoration: none;
+    
+    background-color: var(--color-accent); /* Merah Karat */
+    color: var(--color-text-light); 
+    border: 3px solid var(--color-primary); /* Border Biru Denim Tua */
+    padding: 14px 30px;
+    font-size: 1.1em;
+    font-weight: 700;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 3px 3px 0px 0px var(--color-primary);
+    width: 100%; 
+    max-width: 400px;
+    margin: 20px auto 15px auto;
+}
+
+.cta-button:hover {
+    background-color: #c0392b; /* Merah Karat lebih gelap */
+    transform: translate(-1px, -1px);
+    box-shadow: 2px 2px 0px 0px var(--color-primary);
+}
+
+.download-note {
+    font-size: 0.9em;
+    color: var(--color-text-dark);
+    opacity: 0.7;
+    margin-top: 5px !important; 
+}
+
+/* Info Section */
+.info-section {
+    background-color: #f0f4f7;
+    padding: 30px;
+    border-radius: 4px;
+    border-left: 4px solid var(--color-secondary-accent); /* Kuning Karat */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.info-section h3 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+/* Garis Pemisah Antar Bagian */
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(52, 73, 94, 0), var(--color-primary), rgba(52, 73, 94, 0));
+    margin: 50px 0;
+}
+
+/* About Details */
+.about-card h2 {
+    border-bottom: 1px dashed var(--color-border-light);
+}
+.about-details h3 {
+    font-family: var(--font-heading);
+    color: var(--color-accent); /* Merah Karat */
+    font-size: 1.3em;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.about-details ul { list-style-type: '🔩 '; } /* Ikon Baut/Besi */ 
+.about-details li { margin-bottom: 8px; }
+
+/* Footer */
+.footer {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 2px solid var(--color-accent);
+    text-align: center;
+}
+
+/* ================================================= */
+/* === GAYA UNTUK MINI-GAME "BERSAMA BERSIHKAN KKN" === */
+/* ================================================= */
+
+.game-card h2 { 
+    color: var(--color-accent); 
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.game-area {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-color: #95a5a6; /* Warna Metal Abu-abu */
+    border: 5px solid var(--color-primary);
+    border-radius: 0;
+    margin: 25px auto;
+    overflow: hidden;
+    cursor: crosshair;
+}
+
+.kkn-target {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background-color: var(--color-accent); /* Merah Karat */
+    border-radius: 50%;
+    line-height: 45px;
+    text-align: center;
+    font-size: 1.8em;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.1s;
+    animation: pulse 1s infinite;
+    border: 2px solid var(--color-primary);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.9; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.game-score, .game-timer {
+    position: absolute;
+    z-index: 10;
+    padding: 8px 15px;
+    background-color: var(--color-primary);
+    color: var(--color-secondary-accent); /* Kuning Karat */
+    font-weight: 700;
+    font-family: var(--font-heading);
+    border-radius: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.game-score { left: 0; top: 0; }
+.game-timer { right: 0; top: 0; }
+
+.game-start-button {
+    width: auto !important;
+    padding: 15px 40px !important;
+    font-size: 1.2em !important;
+}
+
+.game-message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--color-accent);
+    font-family: var(--font-heading);
+}
+
+/* ================================================= */
+/* === GAYA UNTUK HALAMAN STAFF BARU === */
+/* ================================================= */
+.staff-card {
+    text-align: center;
+}
+
+.staff-category {
+    margin-top: 30px;
+}
+
+.staff-category h3 {
+    font-family: var(--font-heading);
+    color: var(--color-accent);
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.division {
+    margin-top: 30px;
+}
+
+.division h4 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed var(--color-border-light);
+    padding-bottom: 5px;
+}
+
+/* Container untuk horizontal scroll */
+.staff-scroller {
+    width: 100%;
+    overflow-x: auto; /* Mengaktifkan scroll horizontal */
+    overflow-y: hidden;
+    white-space: nowrap; /* Mencegah item turun ke baris baru */
+    -webkit-overflow-scrolling: touch; /* Efek scroll di iOS */
+    padding-bottom: 10px; /* Jarak untuk scrollbar */
+    margin: 0 auto;
+}
+
+/* Style scrollbar */
+.staff-scroller::-webkit-scrollbar {
+    height: 8px;
+}
+.staff-scroller::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+.staff-scroller::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 10px;
+}
+.staff-scroller::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent);
+}
+
+.staff-grid {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+    justify-content: flex-start; /* Meratakan item ke kiri */
+}
+
+.staff-member {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+    color: inherit;
+    flex-shrink: 0; /* Mencegah item menyusut */
+}
+
+.staff-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-primary);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.staff-member img:hover {
+    transform: scale(1.1);
+}
+
+.staff-member p {
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-top: 10px;
+    line-height: 1.2;
+}
+
+.staff-member small {
+    font-weight: normal;
+    color: #666;
+    display: block;
+}
+
+/* ================================================= */
+/* === GAYA HALAMAN PROFIL STAFF === */
+/* ================================================= */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background: var(--color-card-background);
+    border-radius: 4px;
+    box-shadow: 6px 6px 0px 0px var(--color-border-light);
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+.profile-card .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--color-secondary-accent);
+    margin-bottom: 20px;
+}
+
+.profile-card h1 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.profile-card .profile-details {
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.profile-card .profile-details p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: var(--color-text-dark);
+}
+
+.profile-card .profile-details a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.profile-card .profile-details a:hover {
+    text-decoration: underline;
+}
+
+/* ================================================= */
+/* === DARK MODE STYLES (Malam Pabrik Tua) === */
+/* ================================================= */
+
+body.dark-mode {
+    --color-primary: #1c2833;       /* Biru Denim Malam */
+    --color-accent: #e74c3c;        
+    --color-secondary-accent: #f1c40f; 
+    --color-text-dark: #ecf0f1;     /* Teks Perak */
+    --color-background-light: #2c3e50; /* Latar Belakang Body Gelap */
+    --color-card-background: #34495e; /* Card Denim Gelap */
+    --color-border-light: #44586d;  /* Border gelap */
+    
+    background-color: var(--color-background-light);
+    color: var(--color-text-dark);
+}
+
+/* Aplikasi Gaya Dark Mode */
+
+body.dark-mode .navbar, body.dark-mode .page-title, body.dark-mode .footer {
+    background-color: var(--color-primary);
+    border-color: var(--color-accent);
+}
+
+body.dark-mode .nav-links a { color: var(--color-text-dark); }
+body.dark-mode .nav-links a:hover { color: var(--color-accent); }
+
+body.dark-mode .announcement-card, body.dark-mode .about-card, body.dark-mode .game-card, body.dark-mode .staff-card, body.dark-mode .profile-card, body.dark-mode .info-section {
+    background: var(--color-card-background);
+    color: var(--color-text-dark);
+    box-shadow: 6px 6px 0px 0px #111; 
+    border: 1px solid #444;
+}
+body.dark-mode .profile-card .profile-details p {
+    color: var(--color-text-dark);
+}
+
+body.dark-mode .profile-card .profile-details a {
+    color: var(--color-accent);
+}
+
+body.dark-mode .announcement-card h2, body.dark-mode .about-card h2, body.dark-mode .info-section h3, body.dark-mode .game-card h2 {
+    color: var(--color-secondary-accent); /* Judul Kuning Karat di mode gelap */
+}
+body.dark-mode .staff-card h2, body.dark-mode .staff-category h3, body.dark-mode .profile-card h1 {
+    color: var(--color-secondary-accent);
+}
+
+body.dark-mode .division h4 {
+    color: var(--color-text-dark);
+    border-color: var(--color-border-light);
+}
+
+body.dark-mode .staff-member img {
+    border-color: var(--color-secondary-accent);
+}
+body.dark-mode .staff-scroller::-webkit-scrollbar-track {
+    background: #1c2833;
+}
+body.dark-mode .staff-scroller::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+}
+
+body.dark-mode .cta-button {
+    background-color: var(--color-accent); 
+    color: var(--color-text-dark);
+    border: 3px solid var(--color-secondary-accent); 
+    box-shadow: 3px 3px 0px 0px var(--color-secondary-accent);
+}
+
+body.dark-mode .cta-button:hover {
+     background-color: #c0392b; 
+}
+
+body.dark-mode .about-details h3 {
+    color: var(--color-accent);
+}
+
+body.dark-mode .game-area {
+    background-color: #555;
+    border: 5px solid var(--color-secondary-accent);
+}
+body.dark-mode .game-score, body.dark-mode .game-timer {
+    background-color: var(--color-accent);
+    color: #121212;
+}
+
+body.dark-mode .banner-img {
+    filter: grayscale(0.5) contrast(1.2); /* Lebih abu-abu dan kontras di malam hari */
+}
+
+
+/* --- Media Queries (Responsif untuk HP) --- */
+@media (max-width: 600px) {
+    .navbar { 
+        padding: 15px 10px;
+    }
+    .nav-brand {
+        display: none;
+    }
+    .nav-links { 
+        width: 100%; 
+        justify-content: space-between; 
+        margin: 0; 
+    }
+    .nav-links li {
+        margin: 0;
+    }
+    .nav-links a {
+        font-size: 0.9em;
+        padding: 5px;
+    }
+    .theme-toggle { 
+        margin: 0;
+    }
+    .page-title h1 { 
+        font-size: 1.6em; 
+    }
+    .announcement-card, .about-card, .game-card, .staff-card { 
+        padding: 25px 15px; 
+    }
+    .cta-button { 
+        padding: 12px 20px; 
+        font-size: 1em; 
+    }
+}
+
+/* ================================================= */
+/* === GAYA TOMBOL CONTACT PERSON (CP) UNIK (FLOATING) === */
+/* ================================================= */
+
+.sticky-cp-button {
+    position: fixed;
+    bottom: 25px; 
+    right: 25px; 
+    z-index: 100; 
+    
+    /* Gaya WhatsApp */
+    background-color: #25D366; /* Hijau WhatsApp */
+    color: white;
+    border: 3px solid var(--color-primary); 
+    box-shadow: 4px 4px 0px 0px var(--color-primary); /* Bayangan kuat */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1em;
+    padding: 15px 25px; /* Ditingkatkan sedikit agar lebih besar */
+    border-radius: 4px;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.sticky-cp-button:hover {
+    background-color: #1DA851; 
+    transform: scale(1.05) translate(-2px, -2px);
+    box-shadow: 2px 2px 0px 0px var(--color-primary);
+}
+
+/* Dark Mode untuk Tombol CP */
+body.dark-mode .sticky-cp-button {
+    background-color: #1DA851; /* Tetap hijau tua agar kontras */
+    color: white;
+    border: 3px solid var(--color-secondary-accent);
+    box-shadow: 4px 4px 0px 0px var(--color-secondary-accent);
+}
+
+/* Responsif untuk HP: Tombol CP terlihat seperti tombol bawah penuh */
+@media (max-width: 650px) {
+    .sticky-cp-button {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0; 
+        width: 100%;
+        text-align: center;
+        border-radius: 0;
+        box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3); 
+        padding: 15px;
+        transform: none; 
+        font-size: 1.2em;
+    }
+    
+    /* Tambahkan padding ke body agar footer tidak tertutup tombol sticky */
+    body {
+        padding-bottom: 70px; 
+    }
+}

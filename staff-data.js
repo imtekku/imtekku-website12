@@ -1,0 +1,118 @@
+const staffData = {
+    'inti-1': {
+        name: 'Nama Anggota Inti 1',
+        photo: 'placeholder-staff.jpg',
+        faculty: 'Fakultas Teknik',
+        prodi: 'S1 Teknik Elektro',
+        instagram: 'https://www.instagram.com/nama.inti1/'
+    },
+    'inti-2': {
+        name: 'Nama Anggota Inti 2',
+        photo: 'placeholder-staff.jpg',
+        faculty: 'Fakultas Ekonomi',
+        prodi: 'S1 Manajemen Bisnis',
+        instagram: 'https://www.instagram.com/nama.inti2/'
+    },
+    'inti-3': {
+        name: 'Nama Anggota Inti 3',
+        photo: 'placeholder-staff.jpg',
+        faculty: 'Fakultas Ilmu Komputer',
+        prodi: 'S1 Informatika',
+        instagram: 'https://www.instagram.com/nama.inti3/'
+    },
+    'inti-4': {
+        name: 'Nama Anggota Inti 4',
+        photo: 'placeholder-staff.jpg',
+        faculty: 'Fakultas Teknik',
+        prodi: 'S1 Teknik Informatika',
+        instagram: 'https://www.instagram.com/nama.inti4/'
+    },
+    'inti-5': {
+        name: 'Nama Anggota Inti 5',
+        photo: 'placeholder-staff.jpg',
+        faculty: 'Fakultas Industri',
+        prodi: 'S1 Desain Komunikasi Visual',
+        instagram: 'https://www.instagram.com/nama.inti5/'
+    },
+    'inti-6': {
+        name: 'Nama Anggota Inti 6',
+        photo: 'placeholder-staff.jpg',
+        faculty: 'Fakultas Teknik',
+        prodi: 'S1 Teknik Industri',
+        instagram: 'https://www.instagram.com/nama.inti6/'
+    },
+    'inti-7': {
+        name: 'Nama Anggota Inti 7',
+        photo: 'placeholder-staff.jpg',
+        faculty: 'Fakultas Industri',
+        prodi: 'S1 Desain Interior',
+        instagram: 'https://www.instagram.com/nama.inti7/'
+    },
+    'humas-1': {
+        name: 'Nama Humas 1',
+        photo: 'placeholder-staff.jpg',
+        faculty: 'Fakultas Ilmu Komunikasi',
+        prodi: 'S1 Ilmu Komunikasi',
+        instagram: 'https://www.instagram.com/nama.humas1/'
+    },
+    // Tambahkan data staff lainnya di sini dengan format yang sama
+    // Pastikan ID unik dan sesuai dengan yang ada di index.html
+    // Contoh: 'humas-2', 'humas-3', dst.
+    'humas-2': { name: 'Nama Humas 2', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ilmu Komunikasi', prodi: 'S1 Jurnalisme', instagram: 'https://www.instagram.com/nama.humas2/' },
+    'humas-3': { name: 'Nama Humas 3', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ilmu Komunikasi', prodi: 'S1 Public Relations', instagram: 'https://www.instagram.com/nama.humas3/' },
+    'humas-4': { name: 'Nama Humas 4', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ilmu Komunikasi', prodi: 'S1 Advertising', instagram: 'https://www.instagram.com/nama.humas4/' },
+    'humas-5': { name: 'Nama Humas 5', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ilmu Komunikasi', prodi: 'S1 Hubungan Internasional', instagram: 'https://www.instagram.com/nama.humas5/' },
+    'humas-6': { name: 'Nama Humas 6', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ilmu Komunikasi', prodi: 'S1 Komunikasi Bisnis', instagram: 'https://www.instagram.com/nama.humas6/' },
+    'humas-7': { name: 'Nama Humas 7', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ilmu Komunikasi', prodi: 'S1 Digital Komunikasi', instagram: 'https://www.instagram.com/nama.humas7/' },
+    'humas-8': { name: 'Nama Humas 8', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ilmu Komunikasi', prodi: 'S1 Media Digital', instagram: 'https://www.instagram.com/nama.humas8/' },
+    'humas-9': { name: 'Nama Humas 9', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ilmu Komunikasi', prodi: 'S1 Komunikasi Massa', instagram: 'https://www.instagram.com/nama.humas9/' },
+    'acara-1': { name: 'Nama Acara 1', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Seni', prodi: 'S1 Seni Pertunjukan', instagram: 'https://www.instagram.com/nama.acara1/' },
+    'acara-2': { name: 'Nama Acara 2', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Seni', prodi: 'S1 Seni Rupa', instagram: 'https://www.instagram.com/nama.acara2/' },
+    'acara-3': { name: 'Nama Acara 3', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Seni', prodi: 'S1 Desain Interior', instagram: 'https://www.instagram.com/nama.acara3/' },
+    'acara-4': { name: 'Nama Acara 4', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Seni', prodi: 'S1 Desain Komunikasi Visual', instagram: 'https://www.instagram.com/nama.acara4/' },
+    'acara-5': { name: 'Nama Acara 5', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Seni', prodi: 'S1 Tata Busana', instagram: 'https://www.instagram.com/nama.acara5/' },
+    'acara-6': { name: 'Nama Acara 6', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Seni', prodi: 'S1 Seni Tari', instagram: 'https://www.instagram.com/nama.acara6/' },
+    'acara-7': { name: 'Nama Acara 7', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Seni', prodi: 'S1 Seni Musik', instagram: 'https://www.instagram.com/nama.acara7/' },
+    'acara-8': { name: 'Nama Acara 8', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Seni', prodi: 'S1 Seni Teater', instagram: 'https://www.instagram.com/nama.acara8/' },
+    'acara-9': { name: 'Nama Acara 9', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Seni', prodi: 'S1 Seni Kriya', instagram: 'https://www.instagram.com/nama.acara9/' },
+    'acara-10': { name: 'Nama Acara 10', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Seni', prodi: 'S1 Seni Lukis', instagram: 'https://www.instagram.com/nama.acara10/' },
+    'psdm-1': { name: 'Nama PSDM 1', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Pendidikan', prodi: 'S1 Psikologi', instagram: 'https://www.instagram.com/nama.psdm1/' },
+    'psdm-2': { name: 'Nama PSDM 2', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Pendidikan', prodi: 'S1 Bimbingan Konseling', instagram: 'https://www.instagram.com/nama.psdm2/' },
+    'psdm-3': { name: 'Nama PSDM 3', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Pendidikan', prodi: 'S1 Pendidikan Luar Sekolah', instagram: 'https://www.instagram.com/nama.psdm3/' },
+    'psdm-4': { name: 'Nama PSDM 4', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Pendidikan', prodi: 'S1 Pendidikan Anak Usia Dini', instagram: 'https://www.instagram.com/nama.psdm4/' },
+    'psdm-5': { name: 'Nama PSDM 5', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Pendidikan', prodi: 'S1 Pendidikan Sejarah', instagram: 'https://www.instagram.com/nama.psdm5/' },
+    'psdm-6': { name: 'Nama PSDM 6', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Pendidikan', prodi: 'S1 Pendidikan Bahasa Inggris', instagram: 'https://www.instagram.com/nama.psdm6/' },
+    'psdm-7': { name: 'Nama PSDM 7', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Pendidikan', prodi: 'S1 Pendidikan Bahasa Indonesia', instagram: 'https://www.instagram.com/nama.psdm7/' },
+    'psdm-8': { name: 'Nama PSDM 8', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Pendidikan', prodi: 'S1 Pendidikan Matematika', instagram: 'https://www.instagram.com/nama.psdm8/' },
+    'psdm-9': { name: 'Nama PSDM 9', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Pendidikan', prodi: 'S1 Pendidikan Biologi', instagram: 'https://www.instagram.com/nama.psdm9/' },
+    'sponsor-1': { name: 'Nama Sponsor 1', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ekonomi', prodi: 'S1 Akuntansi', instagram: 'https://www.instagram.com/nama.sponsor1/' },
+    'sponsor-2': { name: 'Nama Sponsor 2', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ekonomi', prodi: 'S1 Manajemen Keuangan', instagram: 'https://www.instagram.com/nama.sponsor2/' },
+    'sponsor-3': { name: 'Nama Sponsor 3', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ekonomi', prodi: 'S1 Manajemen Pemasaran', instagram: 'https://www.instagram.com/nama.sponsor3/' },
+    'sponsor-4': { name: 'Nama Sponsor 4', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ekonomi', prodi: 'S1 Ekonomi Pembangunan', instagram: 'https://www.instagram.com/nama.sponsor4/' },
+    'sponsor-5': { name: 'Nama Sponsor 5', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ekonomi', prodi: 'S1 Bisnis Digital', instagram: 'https://www.instagram.com/nama.sponsor5/' },
+    'sponsor-6': { name: 'Nama Sponsor 6', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ekonomi', prodi: 'S1 Kewirausahaan', instagram: 'https://www.instagram.com/nama.sponsor6/' },
+    'sponsor-7': { name: 'Nama Sponsor 7', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ekonomi', prodi: 'S1 E-commerce', instagram: 'https://www.instagram.com/nama.sponsor7/' },
+    'medfo-1': { name: 'Nama Medfo 1', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ilmu Komputer', prodi: 'S1 Teknik Informatika', instagram: 'https://www.instagram.com/nama.medfo1/' },
+    'medfo-2': { name: 'Nama Medfo 2', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ilmu Komputer', prodi: 'S1 Sistem Informasi', instagram: 'https://www.instagram.com/nama.medfo2/' },
+    'medfo-3': { name: 'Nama Medfo 3', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ilmu Komputer', prodi: 'S1 Teknologi Informasi', instagram: 'https://www.instagram.com/nama.medfo3/' },
+    'medfo-4': { name: 'Nama Medfo 4', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ilmu Komputer', prodi: 'S1 Ilmu Komputer', instagram: 'https://www.instagram.com/nama.medfo4/' },
+    'medfo-5': { name: 'Nama Medfo 5', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ilmu Komputer', prodi: 'S1 Teknik Komputer', instagram: 'https://www.instagram.com/nama.medfo5/' },
+    'medfo-6': { name: 'Nama Medfo 6', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ilmu Komputer', prodi: 'S1 Teknik Multimedia', instagram: 'https://www.instagram.com/nama.medfo6/' },
+    'medfo-7': { name: 'Nama Medfo 7', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ilmu Komputer', prodi: 'S1 Rekayasa Perangkat Lunak', instagram: 'https://www.instagram.com/nama.medfo7/' },
+    'medfo-8': { name: 'Nama Medfo 8', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ilmu Komputer', prodi: 'S1 Kecerdasan Buatan', instagram: 'https://www.instagram.com/nama.medfo8/' },
+    'medfo-9': { name: 'Nama Medfo 9', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ilmu Komputer', prodi: 'S1 Desain Web', instagram: 'https://www.instagram.com/nama.medfo9/' },
+    'medfo-10': { name: 'Nama Medfo 10', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ilmu Komputer', prodi: 'S1 Analisis Data', instagram: 'https://www.instagram.com/nama.medfo10/' },
+    'medfo-11': { name: 'Nama Medfo 11', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ilmu Komputer', prodi: 'S1 Keamanan Siber', instagram: 'https://www.instagram.com/nama.medfo11/' },
+    'medfo-12': { name: 'Nama Medfo 12', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ilmu Komputer', prodi: 'S1 Jaringan Komputer', instagram: 'https://www.instagram.com/nama.medfo12/' },
+    'medfo-13': { name: 'Nama Medfo 13', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Ilmu Komputer', prodi: 'S1 Cloud Computing', instagram: 'https://www.instagram.com/nama.medfo13/' },
+    'logistik-1': { name: 'Nama Logistik 1', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Teknik', prodi: 'S1 Logistik Bisnis', instagram: 'https://www.instagram.com/nama.logistik1/' },
+    'logistik-2': { name: 'Nama Logistik 2', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Teknik', prodi: 'S1 Manajemen Transportasi', instagram: 'https://www.instagram.com/nama.logistik2/' },
+    'logistik-3': { name: 'Nama Logistik 3', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Teknik', prodi: 'S1 Supply Chain Management', instagram: 'https://www.instagram.com/nama.logistik3/' },
+    'logistik-4': { name: 'Nama Logistik 4', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Teknik', prodi: 'S1 Teknik Industri', instagram: 'https://www.instagram.com/nama.logistik4/' },
+    'logistik-5': { name: 'Nama Logistik 5', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Teknik', prodi: 'S1 Teknik Logistik', instagram: 'https://www.instagram.com/nama.logistik5/' },
+    'logistik-6': { name: 'Nama Logistik 6', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Teknik', prodi: 'S1 Manajemen Produksi', instagram: 'https://www.instagram.com/nama.logistik6/' },
+    'logistik-7': { name: 'Nama Logistik 7', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Teknik', prodi: 'S1 Manajemen Operasional', instagram: 'https://www.instagram.com/nama.logistik7/' },
+    'logistik-8': { name: 'Nama Logistik 8', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Teknik', prodi: 'S1 Sistem Logistik', instagram: 'https://www.instagram.com/nama.logistik8/' },
+    'logistik-9': { name: 'Nama Logistik 9', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Teknik', prodi: 'S1 Rantai Pasok', instagram: 'https://www.instagram.com/nama.logistik9/' },
+    'logistik-10': { name: 'Nama Logistik 10', photo: 'placeholder-staff.jpg', faculty: 'Fakultas Teknik', prodi: 'S1 Logistik Maritim', instagram: 'https://www.instagram.com/nama.logistik10/' }
+};

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Staff</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">IMTEKKU</div>
+        <ul class="nav-links">
+            <li><a href="index.html#berita">Berita</a></li> 
+            <li><a href="index.html#about">Tentang Kami</a></li>
+            <li><a href="index.html#staff-section">Staff</a></li>
+            <li><a href="index.html#game-section">Game</a></li>
+        </ul>
+        
+        <button id="theme-toggle" class="theme-toggle" title="Alihkan Mode Gelap/Terang">
+            ☀️
+        </button>
+    </nav>
+
+    <header class="page-title">
+        <div class="container">
+            <h1>Profil Anggota Staff</h1>
+            <p>Informasi detail mengenai anggota kepengurusan IMTEKKU.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="profile-card">
+            <img id="profile-photo" class="profile-image" src="" alt="Foto Staff">
+            <h1 id="profile-name"></h1>
+            <div class="profile-details">
+                <p><strong>Fakultas:</strong> <span id="profile-faculty"></span></p>
+                <p><strong>Program Studi:</strong> <span id="profile-prodi"></span></p>
+                <p><strong>Instagram:</strong> <a id="profile-instagram" href="#" target="_blank"></a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025. IMTEKKU-NARASI | Wild West Technology Posse.</p>
+    </footer>
+
+    <a id="sticky-cp-btn" 
+       href="https://wa.me/628112400837?text=Halo%20Kang%20Arya%2C%20saya%20punya%20pertanyaan%20mengenai%20IMTEKKU." 
+       target="_blank" 
+       class="sticky-cp-button" 
+       title="Kontak Kang Arya (WhatsApp)">
+        Hubungi Kang Arya 📞
+    </a>
+
+    <script src="staff-data.js"></script>
+    <script src="profile-script.js"></script>
+    <script src="script.js"></script> </body>
+</html>
